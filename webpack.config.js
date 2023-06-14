@@ -6,14 +6,14 @@ module.exports = {
   entry: './client/index.js',
   output: {
     path: path.resolve(__dirname, './build'),
-    publicPath: 'auto',
+    publicPath: '/',
     filename: 'bundle.js',
   },
-  plugins: [new HtmlWebpackPlugin({ template: 'index.html' })],
+  plugins: [new HtmlWebpackPlugin({ template: './index.html' })],
   module: {
     rules: [
       {
-        test: /\.jsx?/,
+        test: /.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -25,8 +25,9 @@ module.exports = {
     ],
   },
   devServer: {
+    port: 8080,
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/api/**': 'http://localhost:3000',
     }
   }
 };
