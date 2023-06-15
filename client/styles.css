@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.root-page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.trip-card {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    border-bottom: solid 1px black;
+}
+
+.sidebar {
+    /* width: 30%; */
+    border-right: solid 1px black;
+}
+
+.bag-view {
+    /* position: absolute;
+    right: 0;
+    width: 70%; */
+    /* border-left: solid 1px black; */
+}

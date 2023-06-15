@@ -22,12 +22,17 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   devServer: {
     port: 8080,
     proxy: {
       '/api/**': 'http://localhost:3000',
-    }
+    },
+    historyApiFallback: true,
   }
 };

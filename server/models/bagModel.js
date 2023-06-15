@@ -8,4 +8,4 @@ const bagSchema = new Schema({
     },
 })
 
-module.exports = mongoose.model('bags', bagSchema);
+module.exports = mongoose.model('Bag', bagSchema);

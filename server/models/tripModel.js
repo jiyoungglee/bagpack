@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Bag = require('../models/bagModel');
 const Schema = mongoose.Schema;
 
 const tripSchema = new Schema({
@@ -13,4 +14,4 @@ const tripSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('trips', tripSchema);
+module.exports = mongoose.model('Trips', tripSchema);
